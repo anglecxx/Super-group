@@ -1,0 +1,45 @@
+<!--
+<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+-->
+  <!--<ion-header>-->
+  <!--<ion-navbar>-->
+  <!--</ion-navbar>-->
+  <!--</ion-header>-->
+  <ion-content no-padding>
+    <img class="logo" style="height:280px ;width:360px " src="assets/img/card/feng6.jpg"/>
+    <form (ngSubmit)="login()">
+      <div padding-left padding-right>
+        <ion-list padding-right no-margin >
+<!--
+          <ion-item no-lines></ion-item>
+-->
+            <ion-item>
+              <ion-label>工号：</ion-label>
+              <ion-input type="text"  [(ngModel)]="user.name" name="name"></ion-input>
+            </ion-item>
+            <ion-item margin-top>
+              <ion-label>密码：</ion-label>
+              <ion-input type="password"  [(ngModel)]="user.pwd" name="pwd"></ion-input>
+            </ion-item>
+          <ion-item no-lines></ion-item>
+          </ion-list>
+
+      <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button block type="submit" color="primary" class="login-button">登录</button>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+      </div>
+    </form>
+
+  <!--  <ion-row>
+      <ion-col>
+        <div (click)="goToSignup()">
+          <span>Welcome to the teacher side.</span>
+        </div>
+      </ion-col>
+    </ion-row>-->
+
+</ion-content>

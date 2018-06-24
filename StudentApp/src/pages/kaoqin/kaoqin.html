@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title text-center>考勤汇总信息</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="kaoqincard">
+  <ion-card *ngFor="let item of record">
+    <img src="assets/img/card/feng.jpg">
+    <!--<img src={{backimg}}>-->
+    <div class="card-title">课程：{{item.c.cnameAndID.courseName}}</div>
+    <div class="card-subtitle">迟到：{{item.l}}次</div>
+    <div class="card-subtitle-1">请假：{{item.q}}次</div>
+    <div class="card-subtitle-2">旷课：{{item.k}}次</div>
+    <!--<ion-card-header>-->
+      <!--课程：{{item.c.cnameAndID.courseName}}-->
+    <!--</ion-card-header>-->
+    <!--<ion-card-content>-->
+      <!--<p>迟到：{{item.l}}次</p>-->
+      <!--<p>请假：{{item.q}}次</p>-->
+      <!--<p>旷课：{{item.k}}次</p>-->
+
+    <!--</ion-card-content>-->
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title text-center>签到或请假</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="position-page">
+  <!--<form (submit)="doSubmit($event)" [formGroup]="langForm">-->
+  <!--&lt;!&ndash;<ion-list radio-group formControlName="langs">&ndash;&gt;-->
+
+  <!--&lt;!&ndash;<ion-list-header>&ndash;&gt;-->
+  <!--&lt;!&ndash;Language&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-list-header>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;<ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-label>Go</ion-label>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-radio value="golang" checked="true"></ion-radio>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-label>Rust</ion-label>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-radio value="rust"></ion-radio>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-label>Python</ion-label>&ndash;&gt;-->
+  <!--&lt;!&ndash;<ion-radio value="python"></ion-radio>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;</ion-list>&ndash;&gt;-->
+  <!--<button ion-button="" type="submit" block>提交选项</button>-->
+  <!--</form>-->
+  <ion-item text-center no-lines="">所选课程：{{homeItem.cnameAndID.courseName}}</ion-item>
+
+  <!--<ion-list>-->
+    <!--<ion-item text-wrap *ngFor="let item of newsData">-->
+      <!--<p>{{ item.Pname}}{{item.ID}}</p>-->
+    <!--</ion-item>-->
+  <!--</ion-list>-->
+<!--
+  <button ion-button block  color="dark"  (click)="choseSiteSign()">选择位置签到</button>
+-->
+
+  <button ion-item (click)="choseSiteSign()">
+    <ion-label><span >选择位置签到</span><span style="color: #FF6A3C"> *</span>
+    </ion-label>
+    <ion-icon name="arrow-forward" item-end></ion-icon>
+  </button>
+
+  <br/>
+  <button ion-item (click)="askForLeave()">
+    <ion-label><span >请假申请</span><span style="color: #FF6A3C"> *</span>
+    </ion-label>
+    <ion-icon name="arrow-forward" item-end></ion-icon>
+  </button>
+
+</ion-content>

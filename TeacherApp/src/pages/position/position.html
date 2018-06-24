@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title text-center="">设置签到和提问</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ <!-- <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>-->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      <ion-card text-center=""><button ion-button="" block  color="secondary" (click)="judge11()">签到/提问</button></ion-card>
+      </ion-col>
+      <ion-col>
+      <ion-card text-center=""><button ion-button="" block color="secondary" (click)="judge22()">查看今天的签到情况</button></ion-card>
+ <!--   </ion-fab-list>
+  </ion-fab>-->
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <ion-grid *ngIf="judge1">
+    <ion-row *ngFor="let j of this.hangT">
+      <ion-col *ngFor="let i of this.lieT">
+      <button (click)="question(j+1,i+1)">
+        <ion-icon name="person" *ngIf="position[j][i][1]==1" style="font-size: small"><br/>{{position[j][i][0]}}</ion-icon>
+      <ion-icon name="ios-person-outline" *ngIf="position[j][i][1]==0"><br/></ion-icon>
+      </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-item *ngIf="judge1">
+    <ion-label *ngIf="judge1">请输入时间:</ion-label>
+    <ion-datetime  displayFormat="MMM DD YYYY" [(ngModel)]="bcalldate"  *ngIf="judge1" ></ion-datetime>
+  </ion-item>
+
+  <ion-grid *ngIf="judge1">
+      <ion-row no-lines="">
+  <button ion-button  block color="secondary" (click)="start()" *ngIf="judge1" >开始签到</button>
+        </ion-row>
+      <ion-row no-lines="">
+  <button ion-button  block outline color="secondary" (click)="find()" *ngIf="judge1">提问并打分</button>
+        </ion-row>
+  </ion-grid>
+  <p *ngIf="judge1" style="color: #9d9d9d">选择点击有人的位置可提问、打分</p>
+
+    <button ion-button (click)="test()" *ngIf="judge1" block>历史日期测试</button>
+
+
+
+
+<!--  <ion-item *ngIf="judge2">
+ <ion-badge>查看今天的签到情况</ion-badge>
+  </ion-item>-->
+  <button ion-button (click)="find2()" *ngIf="judge2" color="#9d9d9d">刷新</button>
+  <!--<ion-grid no-lines="">-->
+  <div *ngIf="due2" class="show3">
+  <ion-grid>
+
+    <ion-row class="row1">
+      <ion-col class="col" >姓名</ion-col>
+      <ion-col class="col" >学号</ion-col>
+      <ion-col class="col" >签到时间</ion-col>
+      <ion-col class="col"  >签到位置</ion-col>
+      <ion-col class="col" >签到状态</ion-col>
+    </ion-row>
+
+      <ion-row *ngFor="let r of result2">
+        <ion-col >{{r.pname}}</ion-col>
+        <ion-col >{{r.ID}}</ion-col>
+        <ion-col>{{r.calldate}}</ion-col>
+        <ion-col>{{r.callposition}}</ion-col>
+        <ion-col>{{r.callstate}}</ion-col>
+      </ion-row>
+
+
+  </ion-grid>
+  </div>
+  <!--</ion-grid>-->
+  <ion-content>
+
+  </ion-content>
+</ion-content>

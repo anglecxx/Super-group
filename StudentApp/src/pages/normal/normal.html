@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title text-center>平时课堂表现</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="normalpage">
+  <ion-card *ngFor="let item of qscores">
+    <img src="assets/img/card/feng.jpg">
+    <!--<img src={{backimg}}>-->
+    <div class="card-title">课程：{{item.courseName}}</div>
+    <div class="card-subtitle">课堂作业得分:{{item.score}}</div>
+    <div class="card-subtitle-1">日期：{{item.attendanceDate}}</div>
+    <!--<ion-card-header>-->
+    <!--课程：{{item.courseName}}-->
+    <!--</ion-card-header>-->
+    <!--<ion-card-content>-->
+    <!--<p>记录类型:{{item.callstate}}</p>-->
+    <!--<p>日期：{{item.calldate}}</p>-->
+    <!--</ion-card-content>-->
+  </ion-card>
+</ion-content>

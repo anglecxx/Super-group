@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>首页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list text-center>
+    <h1 text-center  style="font-size: 1.5em;">个人信息</h1>
+  <ion-item no-lines>
+    <ion-avatar item-start >
+      <img src="assets/img/avatar/sss.jpg">
+    </ion-avatar>
+<div padding>
+    <h2>姓名：{{name}}</h2>
+    <h2>学号：{{id}}</h2>
+</div>
+   </ion-item>
+  </ion-list>
+
+
+  <!--<h3>Ionic Menu Starter</h3>-->
+
+  <!--<p>-->
+  <!--If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.-->
+  <!--</p>-->
+
+  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
+
+  <!--<ion-item>{{stuInf}}</ion-item>-->
+  <ion-list  class="courses1">
+    <ion-item style="color: #9d9d9d" no-lines="">选择课程进行签到或请假</ion-item>
+    <ion-item text-center="" style="font-size: 1.3em;" >所选课程</ion-item>
+    <button ion-item   *ngFor="let course of courses"
+            (click)="courseSelected($event, course)">
+      <ion-label><span >{{ course.cnameAndID.courseName }}</span></ion-label>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </button>
+
+  </ion-list>
+
+  <!--<ion-grid>-->
+  <!--<ion-row>-->
+  <!--<ion-col col-12>This column will take 12 columns</ion-col>-->
+  <!--</ion-row>-->
+  <!--<ion-row>-->
+  <!--<ion-col col-6>This column will take 6 columns</ion-col>-->
+  <!--<ion-col col-6>This column will take 6 columns</ion-col>-->
+  <!--</ion-row>-->
+  <!--</ion-grid>-->
+
+</ion-content>
