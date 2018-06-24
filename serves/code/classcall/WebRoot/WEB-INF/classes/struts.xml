@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	
+<!--#############################   数据库表         #####################################-->
+	<package name="personnelaction" namespace="/personnelaction"
+		extends="struts-default,json-default">
+		<action name="getAllPersonnel" class="personnelAction" method="getAllPersonnel" />
+		<action name="getAllPersonnelHql" class="personnelAction" method="getAllPersonnelHql" />
+		
+		<action name="getPersonnelByName" class="personnelAction" method="getPersonnelByName" />
+		<action name="getPersonnelByNameHql" class="personnelAction" method="getPersonnelByNameHql" />
+		<action name="getPersonnelByID" class="personnelAction" method="getPersonnelByID" />
+		<action name="getPersonnelByIDHql" class="personnelAction" method="getPersonnelByIDHql" />
+		
+		<action name="deletePersonnelByID" class="personnelAction" method="deletePersonnelByID" />
+		<action name="createPersonnel" class="personnelAction" method="createPersonnel" />
+		<action name="updatePersonnel" class="personnelAction" method="updatePersonnel" />
+		<action name="CheckPersonnel" class="personnelAction" method="CheckPersonnel" />
+	</package>
+
+	<package name="courseaction" namespace="/courseaction"
+		extends="struts-default,json-default">
+		<action name="getAllCourse" class="courseAction" method="getAllCourse" />
+		<action name="getCourseByName" class="courseAction" method="getCourseByName" />
+		<action name="getAllCourseHql" class="courseAction" method="getAllCourseHql" />
+		<action name="getCourseByNameHql" class="courseAction" method="getCourseByNameHql" />
+		<action name="getCourseByIDHql" class="courseAction" method="getCourseByIDHql" />
+		
+		<action name="createCourse" class="courseAction" method="createCourse" />
+		<action name="deleteCourseByName" class="courseAction" method="deleteCourseByName" />
+		<action name="updateCourse" class="courseAction" method="updateCourse" />
+	</package>
+
+	<package name="callTheRollaction" namespace="/calltherollaction"
+		extends="struts-default,json-default">
+		<action name="createCallTheRoll" class="callTheRollAction" method="createCallTheRoll" />
+		<action name="deleteCallTheRollByID" class="callTheRollAction" method="deleteCallTheRollByID" />
+		<action name="updateCallTheRoll" class="callTheRollAction" method="updateCallTheRoll" />
+		
+		<action name="getAllCallTheRoll" class="callTheRollAction" method="getAllCallTheRoll" />
+		<action name="getCallTheRollByDate" class="callTheRollAction" method="getCallTheRollByDate" />
+		<action name="getCallTheRollBetweenDate" class="callTheRollAction" method="getCallTheRollBetweenDate" />
+		<action name="getCallTheRollBetweenDateAndCoursename" class="callTheRollAction" method="getCallTheRollBetweenDateAndCoursename" />
+		<action name="getCallTheRollByID" class="callTheRollAction" method="getCallTheRollByID" />
+		<action name="getCallTheRollByCoursename" class="callTheRollAction" method="getCallTheRollByCoursename" />
+		<action name="getCallTheRollByIDAndCoursename" class="callTheRollAction" method="getCallTheRollByIDAndCoursename" />
+		<action name="getCallTheRollByIDAndCoursenameHql" class="callTheRollAction" method="getCallTheRollByIDAndCoursenameHql" />
+		<action name="countCallTheRoll" class="callTheRollAction" method="countCallTheRoll" />
+		<action name="countAllCallTheRoll" class="callTheRollAction" method="countAllCallTheRoll" />
+		<action name="callOverByCoursenameAndDate" class="callTheRollAction" method="callOverByCoursenameAndDate" />
+				
+		<action name="getAllCallTheRollHql" class="callTheRollAction" method="getAllCallTheRollHql" />
+		<action name="getCallTheRollByDateHql" class="callTheRollAction" method="getCallTheRollByDateHql" />
+		<action name="getCallTheRollBetweenDateHql" class="callTheRollAction" method="getCallTheRollBetweenDateHql" />
+		<action name="getCallTheRollByIDHql" class="callTheRollAction" method="getCallTheRollByIDHql" />
+		<action name="getCallTheRollByCoursenameHql" class="callTheRollAction" method="getCallTheRollByCoursenameHql" />
+	</package>
+
+	<package name="markaction" namespace="/markaction"
+		extends="struts-default,json-default">
+		<action name="getAllMark" class="markAction" method="getAllMark" />
+		<action name="getMarkByName" class="markAction" method="getMarkByName" />
+		<action name="getMarkByID" class="markAction" method="getMarkByID" />
+		<action name="getMarkByNameAndID" class="markAction" method="getMarkByNameAndID" />
+		<action name="updateMark" class="markAction" method="updateMark" />
+		<action name="createMark" class="markAction" method="createMark" />
+		<action name="deleteMarkByName" class="markAction" method="deleteMarkByName" />
+	</package>
+	
+	<package name="questionaction" namespace="/questionaction"
+		extends="struts-default,json-default">
+		<action name="createQuestion" class="questionAction" method="createQuestion" />
+		<action name="deleteQuestionByCourseName" class="questionAction" method="deleteQuestionByCourseName" />
+		<action name="deleteQuestionByCoursenameAndID" class="questionAction" method="deleteQuestionByCoursenameAndID" />
+		<action name="deleteQuestionByCoursenameAndIDAndDate" class="questionAction" method="deleteQuestionByCoursenameAndIDAndDate" />
+		<action name="updateQuestionByCoursenameAndIDAndDate" class="questionAction" method="updateQuestionByCoursenameAndIDAndDate" />
+	
+		<action name="getAllQuestion" class="questionAction" method="getAllQuestion" />
+		<action name="getQuestionByCourseName" class="questionAction" method="getQuestionByCourseName" />
+		<action name="getQuestionByID" class="questionAction" method="getQuestionByID" />
+		<action name="getQuestionByCoursenameAndID" class="questionAction" method="getQuestionByCoursenameAndID" />
+		<action name="getQuestionByCoursenameAndIDAndDate" class="questionAction" method="getQuestionByCoursenameAndIDAndDate" />
+	</package> 
+	
+	<package name="schoolInfoaction" namespace="/schoolInfoaction"
+		extends="struts-default,json-default">
+		<action name="createSchoolInfo" class="schoolInfoAction" method="createSchoolInfo" />
+		<action name="deleteSchoolInfo" class="schoolInfoAction" method="deleteSchoolInfo" />
+		<action name="updateSchoolInfo" class="schoolInfoAction" method="updateSchoolInfo" />
+		<action name="getSchoolInfo" class="schoolInfoAction" method="getSchoolInfo" />
+	</package>
+<!--#############################   数据库表         #####################################-->
+
+
+
+
+
+
+<!--#############################   数据字典         #####################################-->
+	<package name="ddRoleaction" namespace="/ddRoleaction"
+		extends="struts-default,json-default">
+		<action name="createDdRole" class="ddRoleAction" method="createDdRole" />
+		<action name="deleteDdRoleByName" class="ddRoleAction" method="deleteDdRoleByName" />
+		<action name="getDdRoleStateByName" class="ddRoleAction" method="getDdRoleStateByName" />
+		<action name="updateDdRoleStateByName" class="ddRoleAction" method="updateDdRoleStateByName" />
+		<action name="getAllDdRole" class="ddRoleAction" method="getAllDdRole" />
+	</package>
+	<package name="ddMajoraction" namespace="/ddMajoraction"
+		extends="struts-default,json-default">
+		<action name="createDdMajor" class="ddMajorAction" method="createDdMajor" />
+		<action name="deleteDdMajorByName" class="ddMajorAction" method="deleteDdMajorByName" />
+		<action name="getDdMajorStateByName" class="ddMajorAction" method="getDdMajorStateByName" />
+		<action name="updateDdMajorStateByName" class="ddMajorAction" method="updateDdMajorStateByName" />
+		<action name="getAllDdMajor" class="ddMajorAction" method="getAllDdMajor" />
+	</package>
+	<package name="ddClassDateaction" namespace="/ddClassDateaction"
+		extends="struts-default,json-default">
+		<action name="createDdClassDate" class="ddClassDateAction" method="createDdClassDate" />
+		<action name="deleteDdClassDateByName" class="ddClassDateAction" method="deleteDdClassDateByName" />
+		<action name="getDdClassDateStateByName" class="ddClassDateAction" method="getDdClassDateStateByName" />
+		<action name="updateDdClassDateStateByName" class="ddClassDateAction" method="updateDdClassDateStateByName" />
+		<action name="getAllDdClassDate" class="ddClassDateAction" method="getAllDdClassDate" />
+	</package>
+	<package name="ddStateaction" namespace="/ddStateaction"
+		extends="struts-default,json-default">
+		<action name="createDdState" class="ddStateAction" method="createDdState" />
+		<action name="deleteDdStateByName" class="ddStateAction" method="deleteDdStateByName" />
+		<action name="getDdStateStateByName" class="ddStateAction" method="getDdStateStateByName" />
+		<action name="updateDdStateStateByName" class="ddStateAction" method="updateDdStateStateByName" />
+		<action name="getAllDdState" class="ddStateAction" method="getAllDdState" />
+	</package>
+<!--#############################   数据字典         #####################################-->
+
+</struts> 
